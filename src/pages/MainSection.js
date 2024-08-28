@@ -5,6 +5,7 @@ const MainSection = () => (
   <section className="main-section">
     
     
+    
   </section>
 );
 
