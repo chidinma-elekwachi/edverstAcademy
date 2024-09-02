@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo1 from '../Assets/edverest.png';
-
+import '../styles/Header.css'
 
 const Header = () => (
   <header className="header">
@@ -17,8 +17,8 @@ const Header = () => (
       </div>
       
       <div className='navButtons'>
-          <button id='firstBtn'><a href=''>Sign In</a></button>
-          <button id='secondBtn'><a href=''>Sign Up</a></button>
+          <button id='firstBtn'><a href='/'>Sign In</a></button>
+          <button id='secondBtn'><a href='/'>Sign Up</a></button>
 
       </div>
     </nav>
