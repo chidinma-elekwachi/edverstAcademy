@@ -1,0 +1,32 @@
+#myNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+#logonav{
+    width: 36px;
+    position: relative;
+}
+.linkSec{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10%;
+}
+.navButtons{
+    text-align: right;
+
+}
+#firstBtn{
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+}
+#secondBtn{
+    padding: 10px;
+    background-color: rgb(173, 215, 255);
+    border-radius: 5px;
+}
