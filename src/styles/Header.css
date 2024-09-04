@@ -22,11 +22,41 @@
 #firstBtn{
     padding: 10px;
     background-color: white;
-    border-radius: 5px;
+    border-radius: 7px;
     margin: 10px;
 }
-#secondBtn{
+.secondBtn{
     padding: 10px;
-    background-color: rgb(173, 215, 255);
-    border-radius: 5px;
+    background-color: rgb(8, 8, 95);
+    border-radius: 7px;
+    border: none;
+    margin: 10px;
+}
+#signUpA{
+    color: white;
+}
+.myInput{
+    padding-left: 15px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 300px;
+}
+.search {
+    border-radius: 30px;
+    background-color: orangered;
+    
+}
+.inWbtn{
+    background-color: white;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 991px){
+    .myInput, .inWbtn{
+        display: none;
+    }
+    #secondBtn{
+        display: none;
+    }
 }

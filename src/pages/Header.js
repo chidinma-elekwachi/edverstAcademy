@@ -9,16 +9,22 @@ const Header = () => (
     <nav id='myNav'>
       <a href='/'><img src={logo1} alt='edverest' id='logonav'></img></a>
       
+      <div className='inWbtn'>
+        <input className='myInput' type='text' placeholder='Search for Anything'></input>
+        <button className='secondBtn search'><a href='/' id='signUpA'>Search</a></button>
+      </div>
+      
+
       <div className='linkSec'>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/courses">Courses</Link>
-        <Link to="/courses">Contact</Link>
+        <Link to="/contact">Contact</Link>
       </div>
-      
+
       <div className='navButtons'>
           <button id='firstBtn'><a href='/'>Sign In</a></button>
-          <button id='secondBtn'><a href='/'>Sign Up</a></button>
+          <button className='secondBtn'><a href='/' id='signUpA'>Sign Up</a></button>
 
       </div>
     </nav>

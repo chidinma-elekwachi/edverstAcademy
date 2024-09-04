@@ -1,0 +1,23 @@
+.myJourney{
+    width: calc(33.33% - 20px); /* Each div takes up 33.33% of the container's width with a gap of 20px between them */
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 0 5px;
+}
+@media (max-width: 768px) {
+    .myJourney {
+        width: calc(100% - 20px); 
+    }
+}
+.myJourney h3{
+    color: rgb(8, 8, 95);
+    padding-bottom: 7px;
+}
+
+img{
+    width: auto;
+    height: 30px;
+}
