@@ -23,8 +23,9 @@ const Header = () => (
       </div>
 
       <div className='navButtons'>
-          <button id='firstBtn'><a href='/'>Sign In</a></button>
-          <button className='secondBtn'><a href='/' id='signUpA'>Sign Up</a></button>
+          <button id='firstBtn'><Link to="/signIn">Sign In</Link></button>
+          <button className='secondBtn'><Link to="signUp" id='linkTxt'>Sign up</Link></button>
+
 
       </div>
     </nav>
