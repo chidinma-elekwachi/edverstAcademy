@@ -19,10 +19,10 @@ const Footer = () => {
       <div className="footer-section">
         <h4>Pages</h4>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="courses">Courses</a></li>
+          <li><a href="contact">FAQ</a></li>
         </ul>
       </div>
       <div className="footer-section">
