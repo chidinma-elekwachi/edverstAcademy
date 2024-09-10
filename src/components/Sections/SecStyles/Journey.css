@@ -16,7 +16,9 @@
     color: rgb(8, 8, 95);
     padding-bottom: 7px;
 }
-
+.myJourney:hover{
+    transform: scale(1.1);
+}
 img{
     width: auto;
     height: 30px;
