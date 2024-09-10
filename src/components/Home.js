@@ -10,11 +10,16 @@ import certifIcon from '../Assets/certifi.png'
 import liveSuport from '../Assets/global.png'
 import curricIcon from '../Assets/curricculum.png'
 
-import dataIcon from '../Assets/dataAnalytics.jpg'
+import tutor1 from '../Assets/tutor.jpg'
+import tutor2 from '../Assets/tutor2.jpg'
+import tutor3 from '../Assets/chichi.jpg'
+
 import techWrite from '../Assets/techwriting.jpg'
 import sweIcon from '../Assets/softwareEng.jpg'
 import cyberIcon from '../Assets/cyberSec.jpg'
 import frontendIcon from '../Assets/frontend.jpg'
+
+import Footer from '../pages/Footer';
 
 function Home() {
 
@@ -78,7 +83,7 @@ function Home() {
     {
       img1: frontendIcon,
       title: "Frontend Development",
-      info: "Design and build beautiful, responsive websites.",
+      info: "Design and build beautiful, responsive websites from scratch.",
       rating: 4.5,
       reviews: 890,
       tutor: "Ifeoma Okeke",
@@ -89,14 +94,35 @@ function Home() {
       img1: techWrite,
       title: "Technical Writing",
       info: "Craft clear and concise technical documents for software projects.",
-      rating: 4.4,
+      rating: 4.9,
       reviews: 760,
       tutor: "Salome Ignatius",
       cert: "Technical Writing Professional Certificate (2-4 Months)",
       btn: "./TechnicalWriting.js"
     },
-    
   ];
+
+  const tutors = [
+    {
+      img: tutor1, 
+      name: "Chidinma Elekwachi",
+      profession: "Software Engineer",
+      bio: "An experienced software engineer with a passion for teaching."
+    },
+    {
+      img: tutor2, 
+      name: "Promise Akobi",
+      profession: "Cyber Security Specialist",
+      bio: "A seasoned cybersecurity expert dedicated to protecting assets."
+    },
+    {
+      img: tutor3,
+      name: "Ifeoma Okeke",
+      profession: "Frontend Developer",
+      bio: "A creative frontend developer with a flair for designing user interfaces."
+    }
+  ];
+  
 
   return (
     <div>
@@ -128,7 +154,7 @@ function Home() {
       <div className='thirdSec'>
             <div className='textSec'>
               <h1 id='myH1'>Join More than <span>1,250+</span> Learners around the world.</h1>
-              <button id='courseBtn'><a href='./Courses.js' id='diveTxt'>See All Courses</a></button>
+              <button id='courseBtn'><a href='./Courses' id='diveTxt'>See All Courses</a></button>
             </div>
       </div>
 
@@ -142,10 +168,31 @@ function Home() {
               ))}
           </div>
           <center>
-            <button id='courseBtn'><a href='./Courses.js' id='diveTxt'>See All Courses</a></button>
+            <button id='courseBtn'><a href='./Courses' id='diveTxt'>See All Courses</a></button>
           </center>
       </div>
           
+        <div>
+          <div className='catHead'>
+              <h1>Meet Our Instructors</h1>
+          </div>
+          
+          <div>
+            <div className='tutorContainer'>
+              {tutors.map((tutor, index) => (
+                <div key={index} className='tutorCard'>
+                  <img src={tutor.img} alt='tutors' className='tutorImage' />
+                  <h3 className='tutorName'>{tutor.name}</h3>
+                  <p className='tutorProfession'>{tutor.profession}</p>
+                  <p className='tutorBio'>{tutor.bio}</p>
+                </div>
+              ))}
+              </div>
+          </div>
+          
+          <Footer />
+
+        </div>
     </div>
   );
 }
