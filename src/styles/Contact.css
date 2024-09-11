@@ -1,0 +1,139 @@
+.myContact{
+    margin: 50px;
+    box-shadow: 0 0 5px;
+    border-radius: 8px;
+    width: 80%;
+    height: 85vh;
+    display: flex;
+    position: relative;
+    left: 50px;
+}
+.contactTxt{
+    background-color: rgb(39, 39, 110);
+    color: whitesmoke;
+    width: 40%;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 14px;
+}
+.contactTxt img{
+    width: 30px;
+    height: auto;
+}
+.contactTxt a{
+    color: white;
+}
+.call{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+
+.imageCont{
+    padding-top: 40px;
+}
+.contForm {
+    width: 60%;
+    border-radius: 8px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-pair {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-pair div {
+    width: 48%;
+}
+
+.contForm input[type="text"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(21, 21, 54);
+    font-size: 16px;
+}
+
+.contForm label {
+    font-size: 14px;
+    color: rgb(21, 21, 54);
+}
+
+.contForm input[type="radio"] {
+    accent-color: rgb(21, 21, 54);
+    margin-right: 5px;
+    margin-top: 20px;
+}
+.subj{
+    padding-top: 20px;
+}
+
+.radioL{
+    margin-right: 20px;
+}
+.myRad{
+    padding: 15px 0px;
+}
+
+.contForm button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    align-self: flex-start;
+}
+
+.contForm section{
+    display: flex;
+    justify-content: right;
+    padding-top: 20px;
+}
+
+.contForm button:hover {
+    background-color: #df4913;
+}
+
+@media (max-width: 768px) {
+    .contForm {
+        width: 100%;
+    }
+
+    .input-pair {
+        flex-direction: column;
+        
+    }
+    .myContact{
+        height: fit-content;
+    }
+
+  
+    
+    .input-pair div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .myContact{
+        left: 0;
+        display: block;
+        gap: 20px;
+    }.contactTxt {
+        width: 100%;
+    }
+    .contactTxt h2{
+        padding-bottom: 5px;
+    }
+}

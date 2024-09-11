@@ -44,12 +44,19 @@
     height: auto;
     margin-bottom: 10px;
   }
-  
+  .myPlay{
+    padding-bottom: 5px;
+  }
+  .app-icons{
+    display: flex;
+    align-items: center;
+  }
   .app-icons img {
     margin-right: 10px;
-    width: 30px;
+    width: 90px;
+    height: auto;
   }
-  
+
   .social-icons img {
     margin-right: 10px;
     width: 30px;
@@ -69,8 +76,15 @@
     }
   
     .footer-section {
-      margin-right: 0;
+      margin-right: 10px;
       margin-bottom: 20px;
     }
+    .footer-logo {
+        width: 100px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
   }
+
   

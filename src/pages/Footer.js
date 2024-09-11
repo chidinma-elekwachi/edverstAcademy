@@ -5,6 +5,8 @@ import x from '../Assets/twitter.webp'
 import facebook from '../Assets/facebk.webp'
 
 import logo from '../Assets/edverest.png'
+import appStore from '../Assets/appStore.png'
+import playStore from '../Assets/playStore.png'
 
 const Footer = () => {
   return (
@@ -12,8 +14,8 @@ const Footer = () => {
       <div className="footer-section">
         <img src={logo} alt="Logo" className="footer-logo" />
         <div className="app-icons">
-          <img src="/path-to-play-store-icon.png" alt="Play Store" />
-          <img src="/path-to-app-store-icon.png" alt="App Store" />
+          <img src={appStore} alt="Play Store" />
+          <img className="myPlay" src={playStore} alt="App Store" />
         </div>
       </div>
       <div className="footer-section">

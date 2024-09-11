@@ -1,7 +1,15 @@
 .mySign{
     display: flex;
+
 }
 
 .secSec{
-    
+    width: 50%;
+}
+.firstSec{
+    padding: 20px;
+}
+.firstSec img{
+    width: 100%;
+    height: auto;
 }
