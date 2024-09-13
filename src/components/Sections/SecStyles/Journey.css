@@ -6,6 +6,7 @@
     background-color: white;
     display: flex;
     box-shadow: 0 0 5px;
+    transition: transform 1s ease;
 }
 @media (max-width: 768px) {
     .myJourney {
@@ -17,7 +18,7 @@
     padding-bottom: 7px;
 }
 .myJourney:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 img{
     width: auto;

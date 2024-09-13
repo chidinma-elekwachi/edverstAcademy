@@ -175,8 +175,8 @@ span{
   
   .tutorCard {
     width: calc(32% - 22px);
-    padding: 10px;
-    border: 1px solid rgb(21, 21, 54);
+    padding: 5px;
+    background-color: whitesmoke;
     border-radius: 25px;
     text-align: center;
   }
@@ -192,7 +192,7 @@ span{
 }
   .tutorImage {
     width: 100%;
-    height: 420px;
+    height: auto;
     border-radius: 25px;
     margin-bottom: 10px;
   }
@@ -214,5 +214,6 @@ span{
     color: rgb(21, 21, 54);
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 15px;
   }
   

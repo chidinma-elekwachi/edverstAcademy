@@ -3,6 +3,10 @@ import '../styles/Footer.css';
 
 import x from '../Assets/twitter.webp'
 import facebook from '../Assets/facebk.webp'
+import linkeldn from '../Assets/linkeldn.png'
+import github from '../Assets/github.png'
+
+
 
 import logo from '../Assets/edverest.png'
 import appStore from '../Assets/appStore.png'
@@ -46,10 +50,10 @@ const Footer = () => {
             <img src={x} alt="Twitter" />
           </a>
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-            <img src="/path-to-linkedin-icon.png" alt="LinkedIn" />
+            <img src={linkeldn} alt="LinkedIn" />
           </a>
           <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
-            <img src="/path-to-github-icon.png" alt="GitHub" />
+            <img src={github} alt="GitHub" />
           </a>
         </div>
       </div>
