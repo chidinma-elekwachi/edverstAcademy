@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';  // Add useState from React
 import '../styles/Contact.css';
 
 // contact icons
@@ -11,6 +11,25 @@ import telegramIcon from '../Assets/icons8-telegram-30.png';
 import Footer from '../pages/Footer';
 
 function Contact() {
+  const [msg, setMsg] = useState('');  
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxaTccw_Zi2lEP7FPWesQgkuG-1PxpzstANSchPGxQ2RMNZfzZR6MQ38t0B2OypqoOf/exec';
+    const form = e.target;
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        setMsg('Your message has been sent successfully!');
+        setTimeout(() => {
+          setMsg('');
+        }, 500);
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message));
+  };
+
   return (
     <div>
       <div className='myContact'>
@@ -21,15 +40,15 @@ function Contact() {
           <div className='call'>
             <a href="tel:+2349138661387">
               <img src={callIcon} alt='Call Icon' className='contact-icon' />
-              +2349138661387
+               +2349138661387
             </a>
             <a href="mailto:elexisbiz@gmail.com">
               <img src={mailIcon} alt='Mail Icon' className='contact-icon' />
-              elexisbiz@gmail.com
+               elexisbiz@gmail.com
             </a>
             <p>
               <img src={locationIcon} alt='Location Icon' className='contact-icon' />
-              2972 Westheimer Rd, Santa Ana, Illinois 85485
+               2972 Westheimer Rd, Santa Ana, Illinois 85485
             </p>
           </div>
 
@@ -41,27 +60,27 @@ function Contact() {
         </div>
 
         <div className='contForm'>
-          <form action=''>
+          <form name="submit-to-google-sheet" onSubmit={handleSubmit}>
             <div className='infos'>
               <div className="input-pair">
                 <div>
                   <label htmlFor="fname">First Name</label>
-                  <input type='text' name='fname' />
+                  <input type='text' name='fname' required />
                 </div>
                 <div>
                   <label htmlFor="sname">Last Name</label>
-                  <input type='text' name='sname' /><br />
+                  <input type='text' name='sname' required /><br />
                 </div>
               </div>
               <br />
               <div className="input-pair">
                 <div>
                   <label htmlFor="mail">Email Address</label>
-                  <input type='text' name='mail' />
+                  <input type='email' name='mail' required />
                 </div>
                 <div>
                   <label htmlFor="phone">Phone Number</label>
-                  <input type='text' name='phone' /><br />
+                  <input type='number' name='phone' required /><br />
                 </div>
               </div>
               <br />
@@ -82,12 +101,14 @@ function Contact() {
 
             <div className='subj'>
               <label htmlFor="message">Message</label>
-              <input type='text' max={50} name='message' /><br />
+              <textarea name='message' cols="10" rows="5" maxLength={50} required></textarea><br />
 
               <section>
                 <button type='submit'>Send Message</button>
               </section>
             </div>
+
+            <span id="msg">{msg}</span>
           </form>
         </div>
       </div>

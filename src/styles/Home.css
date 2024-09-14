@@ -97,18 +97,21 @@ span{
 
 .thirdSec{
     width: 100%;
-    background-image: url('../Assets/focused-female.jpg');
+    background-image: url('../Assets/study-group-african-people.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     align-items: left;
     padding: 60px;
-    padding-top: 125px;
-    padding-bottom: 125px;
+    padding-top: 150px;
+    padding-bottom: 200px;
 }
 .textSec{
     width: 45%;
+    color: white;
+    padding-left: 20px;
 }
 #myH1{
     font-size: 3.1rem;
@@ -124,11 +127,17 @@ span{
         background-position: center center;
     }
     .textSec{
-        width: 80%;
+        width: 100%;
     }
     #myH1{
         font-size: 2.9rem;
         line-height: 3.4rem;
+    }
+    .sndTxt{
+        width: 90%;
+    }
+    .sndTxt > p{
+        font-size: 1.1rem;
     }
 }
 #courseBtn{

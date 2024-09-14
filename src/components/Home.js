@@ -10,9 +10,9 @@ import certifIcon from '../Assets/certifi.png'
 import liveSuport from '../Assets/global.png'
 import curricIcon from '../Assets/curricculum.png'
 
-import tutor1 from '../Assets/tutor.jpg'
-import tutor2 from '../Assets/tutor2.jpg'
-import tutor3 from '../Assets/chichi.jpg'
+import tutor1 from '../Assets/chichi.jpg'
+import tutor2 from '../Assets/promiseProject.jpg'
+import tutor3 from '../Assets/nonsoProject.jpg'
 
 import techWrite from '../Assets/techwriting.jpg'
 import sweIcon from '../Assets/softwareEng.jpg'
@@ -86,7 +86,7 @@ function Home() {
       info: "Design and build beautiful, responsive websites from scratch.",
       rating: 4.5,
       reviews: 890,
-      tutor: "Ifeoma Okeke",
+      tutor: "Nonso Okeke",
       cert: "Frontend Developer Certificate (3-6 Months)",
       btn: "./FrontendDevelopment.js"
     },
@@ -117,7 +117,7 @@ function Home() {
     },
     {
       img: tutor3,
-      name: "Ifeoma Okeke",
+      name: "Nonso Okeke",
       profession: "Frontend Developer",
       bio: "A creative frontend developer with a flair for designing user interfaces."
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/About.css';
 import founder from '../Assets/chichi.jpg';
-import cofounder from '../Assets/tutor2.jpg'; 
+import cofounder from '../Assets/promiseProject.jpg'; 
 import Footer from '../pages/Footer';
 
 function About() {
