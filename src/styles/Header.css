@@ -1,66 +1,123 @@
-#myNav{
+#myNav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     background-color: whitesmoke;
     padding: 10px;
-}
-#logonav{
-    width: 36px;
     position: relative;
-}
-.linkSec{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 10%;
-}
-.navButtons{
-    text-align: right;
-
-}
-#firstBtn{
-    padding: 10px;
+  }
+  
+  #logonav {
+    width: 36px;
+  }
+  
+  .inWbtn {
     background-color: white;
-    border-radius: 7px;
-    margin: 10px;
-}
-.secondBtn{
-    padding: 10px;
-    background-color: rgb(8, 8, 95);
-    border-radius: 7px;
-    border: 1px solid white;
-    margin: 10px;
-}
-#linkTxt{
-    color: white;
-}
-#signUpA{
-    color: white;
-    border: none;
-}
-.myInput{
+    border-radius: 25px;
+    display: flex;
+    align-items: center; /* Ensure content is vertically centered */
+  }
+  
+  .myInput {
     padding-left: 15px;
     outline: none;
     border: none;
     background-color: transparent;
     width: 300px;
-}
-.search {
+  }
+  
+  .linkSec {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Align items vertically in the middle */
+  }
+  
+  .navButtons {
+    display: flex; /* Ensure buttons are aligned properly on larger screens */
+    align-items: center;
+  }
+  
+  #firstBtn,
+  .secondBtn {
+    padding: 10px;
+    background-color: white;
+    border-radius: 7px;
+    margin: 10px;
+  }
+  
+  .secondBtn {
+    background-color: rgb(8, 8, 95);
+    border: 1px solid white;
+  }
+  
+  .search {
     border-radius: 30px;
     background-color: orangered;
-    
-}
-.inWbtn{
-    background-color: white;
-    border-radius: 25px;
-}
-
-@media screen and (max-width: 991px){
-    .myInput, .inWbtn{
-        display: none;
+  }
+  
+  #linkTxt,
+  #signUpA {
+    color: white;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+  }
+  
+  @media (max-width: 991px) {
+    .linkSec {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+      background-color: whitesmoke;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      padding: 50px;
     }
-    .secondBtn{
-        display: none;
+  
+    .linkSec.active {
+      display: flex;
     }
-}
+  
+    .navButtons {
+      display: none; /* Hide on smaller screens */
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .search {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  
+    .inWbtn {
+      display: flex;
+    }
+  
+    .linkSec.active ~ .inWbtn {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .myInput {
+      width: 200px;
+    }
+  }
+  
