@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About'; 
 import Courses from './components/Courses';
 import Contact from './components/Contact';
+import Faq from './components/Faq';
 import SignIn from './components/Logins/SignIn';
 import SignUp from './components/Logins/SignUp';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/signUp" element={<SignUp />} />

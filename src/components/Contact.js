@@ -101,7 +101,7 @@ function Contact() {
 
             <div className='subj'>
               <label htmlFor="message">Message</label>
-              <textarea name='message' cols="10" rows="5" maxLength={50} required></textarea><br />
+              <textarea name='message' cols="10" rows="5" maxLength={100} required></textarea><br />
 
               <section>
                 <button type='submit'>Send Message</button>

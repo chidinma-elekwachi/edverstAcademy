@@ -28,7 +28,10 @@ const Header = () => {
           <Link to="/" onClick={closeMenu}>Home</Link>
           <Link to="/about" onClick={closeMenu}>About</Link>
           <Link to="/courses" onClick={closeMenu}>Courses</Link>
+          <Link to="/faq" onClick={closeMenu}>FAQ</Link>
           <Link to="/contact" onClick={closeMenu}>Contact</Link>
+
+
           
           
           <button id='firstBtn' onClick={closeMenu}>
