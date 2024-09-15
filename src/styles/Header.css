@@ -16,7 +16,7 @@
     background-color: white;
     border-radius: 25px;
     display: flex;
-    align-items: center; /* Ensure content is vertically centered */
+    align-items: center; 
   }
   
   .myInput {
@@ -30,11 +30,11 @@
   .linkSec {
     display: flex;
     gap: 20px;
-    align-items: center; /* Align items vertically in the middle */
+    align-items: center;
   }
   
   .navButtons {
-    display: flex; /* Ensure buttons are aligned properly on larger screens */
+    display: flex; 
     align-items: center;
   }
   
@@ -94,7 +94,7 @@
     }
   
     .navButtons {
-      display: none; /* Hide on smaller screens */
+      display: none; 
     }
   
     .hamburger {
@@ -119,5 +119,33 @@
     .myInput {
       width: 200px;
     }
+
   }
+
+  @media (max-width: 991px) {
+    .hamburger {
+      display: flex; 
+    }
+    
+    .hamburger .bar {
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      transition: all 0.3s ease;
+    }
+  
+    .hamburger.open .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .hamburger.open .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.open .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+  
+  
   

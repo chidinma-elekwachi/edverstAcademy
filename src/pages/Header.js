@@ -10,6 +10,10 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <nav id='myNav'>
@@ -21,16 +25,21 @@ const Header = () => {
         </div>
 
         <div className={`linkSec ${menuOpen ? 'active' : ''}`}>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/courses">Courses</Link>
-          <Link to="/contact">Contact</Link>
-          {/* Move Sign In and Sign Up buttons here */}
-          <button id='firstBtn'><Link to="/signIn">Sign In</Link></button>
-          <button className='secondBtn'><Link to="signUp" id='linkTxt'>Sign up</Link></button>
+          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/about" onClick={closeMenu}>About</Link>
+          <Link to="/courses" onClick={closeMenu}>Courses</Link>
+          <Link to="/contact" onClick={closeMenu}>Contact</Link>
+          
+          
+          <button id='firstBtn' onClick={closeMenu}>
+            <Link to="/signIn">Sign In</Link>
+          </button>
+          <button className='secondBtn' onClick={closeMenu}>
+            <Link to="/signUp" id='linkTxt'>Sign up</Link>
+          </button>
         </div>
 
-        <div className="hamburger" onClick={toggleMenu}>
+        <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
