@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo1 from '../Assets/edverest.png';
 import '../styles/Header.css';
+import SearchForm from '../components/Sections/Search';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,10 +20,7 @@ const Header = () => {
       <nav id='myNav'>
         <a href='/'><img src={logo1} alt='edverest' id='logonav' /></a>
 
-        <div className='inWbtn'>
-          <input className='myInput' type='text' placeholder='Search for Anything' />
-          <button className='secondBtn search'><a href='/' id='signUpA'>Search</a></button>
-        </div>
+        <SearchForm />
 
         <div className={`linkSec ${menuOpen ? 'active' : ''}`}>
           <Link to="/" onClick={closeMenu}>Home</Link>

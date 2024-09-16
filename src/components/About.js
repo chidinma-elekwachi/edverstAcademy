@@ -50,6 +50,22 @@ function About() {
         </div>
       </div>
 
+      <div className='offering'>
+        <h1>At EdVerest We Offer You</h1>
+        <h4>Industry-Relevant Curriculum</h4>
+        <ul>
+          <li>Hands-On Training</li>
+          <li>State-of-the-Art Technology</li>
+          <li>Experienced Instructors</li>
+          <li>Certification Preparation</li>
+          <li>Career Services</li>
+          <li>Up-to-Date Industry Trends</li>
+          <li>Networking Opportunities</li>
+          <li>Flexible Learning Options</li>
+          <li>Practical Problem-Solving Skills</li>
+        </ul>
+      </div>
+
       <Footer />
     </div>
   );

@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding: 20px;
   }
   
@@ -52,7 +52,7 @@
   
   .title {
     font-size: 0.9em;
-    color: gray;
+    color: orangered;
   }
   
   @media (min-width: 768px) {
@@ -76,6 +76,7 @@
     font-size: 2em;
     margin-bottom: 20px;
     color: rgb(21, 21, 54);
+    padding: 30px;
   }
   
   .testimonial-grid {
@@ -86,11 +87,30 @@
   
   .testimonial {
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    font-weight: 500;
     position: relative;
     color: rgb(21, 21, 54);
+  }
+
+  .offering{
+    padding: 60px;
+    padding-bottom: 95px;
+    background-image: url(../Assets//hugAnime.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    margin-top: 50px;
+  }
+  .offering h1 {
+    color: rgb(21, 21, 54);
+    margin-bottom: 10px;
+
+  }
+  .offering h4{
+    color: orange;
+    padding-bottom: 10px;
   }
   
   .testimonial .quote {
@@ -98,10 +118,25 @@
     font-size: 1.5em;
     font-weight: bold;
   }
+  .offering ul{
+    color: rgb(21, 21, 54);
+    padding-left: 20px;
+  }
+
+  @media (max-width: 768px) {
+  .offering{
+    padding: 50px;
+    padding-bottom: 150px;
+    background-position: right bottom;
+    background-size: 300px auto;
+  }
+  
+}
   
   @media (min-width: 768px) {
     .testimonial-grid {
       grid-template-columns: repeat(3, 1fr);
     }
+    
   }
   
