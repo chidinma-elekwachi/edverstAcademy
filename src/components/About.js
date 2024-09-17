@@ -32,6 +32,41 @@ function About() {
         </div>
       </div>
 
+      <div className='impact'>
+        <div className='impactxt'>
+        <h1>Creating impact around the world</h1>
+        <p>With our global catalog spanning the latest skills and topics, people and organizations everywhere are able to adapt to change and thrive.</p>
+        </div>
+
+        <div class="stats-container">
+        <div class="stat-item">
+          <h1>73k+</h1>
+          <p>Learners</p>
+        </div>
+        <div class="stat-item">
+          <h1>75+</h1>
+          <p>Instructors</p>
+        </div>
+        <div class="stat-item">
+          <h1>20K+</h1>
+          <p>Courses</p>
+        </div>
+        <div class="stat-item">
+          <h1>1.5k+</h1>
+          <p>Course Enrollments</p>
+        </div>
+        <div class="stat-item">
+          <h1>5</h1>
+          <p>Languages</p>
+        </div>
+        <div class="stat-item">
+          <h1>1K+</h1>
+          <p>Certifications</p>
+        </div>
+      </div>
+
+      </div>
+
       <div className="testimonials">
         <h2>What Our Students Say</h2>
         <div className="testimonial-grid">

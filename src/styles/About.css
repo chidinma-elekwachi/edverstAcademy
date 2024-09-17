@@ -139,4 +139,51 @@
     }
     
   }
+  .impact{
+    background-color: rgb(21, 21, 54);
+    color: #f4f4f4;
+    text-align: center;
+    padding: 40px;
+  }
+  .impactxt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .impactxt p{
+    width: 60%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-item h1 {
+    font-size: 2.1rem;
+  }
+
+  .stat-item p {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    .stats-container {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+    .impact p{
+      width: 90%;
+    }
+  }
   

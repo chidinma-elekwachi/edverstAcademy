@@ -98,7 +98,7 @@ function Home() {
       reviews: 760,
       tutor: "Salome Ignatius",
       cert: "Technical Writing Professional Certificate (2-4 Months)",
-      btn: "./TechnicalWriting.js"
+      btn: "/technical-writing"
     },
   ];
 

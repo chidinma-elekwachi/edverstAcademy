@@ -9,6 +9,11 @@ import Faq from './components/Faq';
 import SignIn from './components/Logins/SignIn';
 import SignUp from './components/Logins/SignUp';
 
+import CyberSecurity from './components/MyCourses/CyberSecurity';
+import FrontendDevelopment from './components/MyCourses/FrontendDevelopment';
+import SoftwareEngineering from './components/MyCourses/SoftwareEngineering';
+import TechnicalWriting from './components/MyCourses/TechnicalWriting';
+
 import './App.css';
 
 function App() {
@@ -23,6 +28,12 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/signUp" element={<SignUp />} />
+          
+          <Route path="/cyber-security" element={<CyberSecurity />} />
+          <Route path="/software-engineering" element={<SoftwareEngineering />} />
+          <Route path="/frontend-development" element={<FrontendDevelopment />} />
+          <Route path="/technical-writing" element={<TechnicalWriting />} />
+
         </Routes>
     </Router>
   );
