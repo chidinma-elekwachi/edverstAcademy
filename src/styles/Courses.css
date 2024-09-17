@@ -3,23 +3,18 @@
   }
   
   .courses-title {
-    font-size: 36px;
+    font-size: 2.5rem; /* Adjusted */
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
     color: rgb(21, 21, 54);
   }
-  .courses-titles {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: center;
-    color: rgb(21, 21, 54);
-  }
+  
   .courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    position: relative;
   }
   
   .course-card {
@@ -41,30 +36,55 @@
     margin-bottom: 20px;
   }
   
-  .course-title {
-    font-size: 24px;
+  .course-name {
+    font-size: 1.6rem; /* Reduced size */
     font-weight: bold;
     margin-bottom: 10px;
+    color: rgb(21, 21, 54);
   }
   
   .course-info {
     margin-bottom: 10px;
   }
   
+  .rating {
+    color: rgb(255, 165, 0); /* Orange color for ratings */
+  }
+  
+  .rating-number {
+    font-weight: bold;
+  }
+  
   .course-button {
     display: inline-block;
-    background-color: #007bff;
+    background-color: rgb(21, 21, 54); /* Your rgb blue */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
   }
-
-.course-button:hover {
-    background-color: #df4913;
-}
-
+  
+  .course-button:hover {
+    background-color: rgb(223, 73, 19); /* Orange for hover */
+  }
+  
+  /* Carousel controls */
+  .carousel-control {
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
   

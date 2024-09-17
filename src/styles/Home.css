@@ -156,7 +156,7 @@ span{
     border: none
 }
 #courseBtn:hover{
-    background-color: orange;
+    background-color: rgb(255, 128, 0);
 }
 
 .courseCat{
@@ -222,7 +222,7 @@ span{
   
   .tutorProfession {
     font-size: 1rem;
-    color: orangered;
+    color: rgb(255, 128, 0);
     margin-bottom: 10px;
   }
   

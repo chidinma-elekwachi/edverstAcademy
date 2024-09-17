@@ -18,6 +18,9 @@
     max-height: 200px;
     overflow-y: auto;
   }
+  .search{
+    margin: 10px;
+  }
   
   .dropdown li {
     padding: 10px;

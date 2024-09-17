@@ -38,7 +38,7 @@ const faqs = [
 ];
 
 function Faq() {
-  const [activeQuestion, setActiveQuestion] = useState(null);
+  const [activeQuestion, setActiveQuestion] = useState(1);
 
   const toggleQuestion = (id) => {
     setActiveQuestion(activeQuestion === id ? null : id);

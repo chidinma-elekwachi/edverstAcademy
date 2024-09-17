@@ -31,7 +31,7 @@
     border-radius: 5px;
     border: 1px solid #ddd;
     margin-top: 5px;
-    color: orangered;
+    color: rgb(255, 128, 0);
   }
   .myFaq{
     display: flex;

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '.././styles/Courses.css'
-import techWrite from '../Assets/techwriting.jpg'
-import sweIcon from '../Assets/softwareEng.jpg'
-import cyberIcon from '../Assets/cyberSec.jpg'
-import frontendIcon from '../Assets/frontend.jpg'
+import '../styles/Courses.css';
+import techWrite from '../Assets/techwriting.jpg';
+import sweIcon from '../Assets/softwareEng.jpg';
+import cyberIcon from '../Assets/cyberSec.jpg';
+import frontendIcon from '../Assets/frontend.jpg';
 
 const coursesData = [
   {
@@ -30,6 +30,7 @@ const coursesData = [
   {
     img1: frontendIcon, 
     title: "Frontend Development",
+   
     info: "Design and build beautiful, responsive websites from scratch.",
     rating: 4.5,
     reviews: 890,
@@ -50,21 +51,34 @@ const coursesData = [
 ];
 
 function Courses() {
-  return ( 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? coursesData.length - 3 : prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === coursesData.length - 3 ? 0 : prevIndex + 1));
+  };
+
+  return (
     <div className="courses-container">
       <h1 className="courses-title">Courses</h1>
 
       <div className="courses-grid">
-        {coursesData.map((course, index) => (
+        {coursesData.slice(currentIndex, currentIndex + 3).map((course, index) => (
           <div key={index} className="course-card">
             <img src={course.img1} alt={course.title} className="course-image" />
-            <h2 className="course-titles">{course.title}</h2>
+            <p className="course-name">{course.title}</p>
             <p className="course-info">{course.info}</p>
-            <p>Rating: {course.rating} ({course.reviews} reviews)</p>
+            <p className="rating">Rating: <span className="rating-number">{course.rating}</span> ({course.reviews} reviews)</p>
             <p>Instructor: {course.tutor}</p>
             <Link to={course.btn} className="course-button">Go to Course</Link>
           </div>
         ))}
+
+        <span className="carousel-control prev" onClick={handlePrev}>&lt;</span>
+        <span className="carousel-control next" onClick={handleNext}>&gt;</span>
       </div>
     </div>
   );
