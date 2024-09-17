@@ -124,6 +124,9 @@ textarea {
     margin-top: 20px;
     align-self: flex-start;
 }
+.contForm button:hover {
+    background-color: #df4913;
+}
 
 .contForm section {
     display: flex;

@@ -24,7 +24,6 @@ import Footer from '../pages/Footer';
 function Home() {
 
   function btnClick() {
-    // Your click handler logic
   }
 
   const journeys = [
@@ -68,7 +67,7 @@ function Home() {
       reviews: 1250,
       tutor: "Chidinma Elekwachi",
       cert: "Professional Certificate in Software Engineering (6-12 Months)",
-      btn: "./SoftwareEngineering.js"
+      btn: "/software-engineering"
     },
     {
       img1: cyberIcon,
@@ -78,7 +77,7 @@ function Home() {
       reviews: 980,
       tutor: "Promise Akobi",
       cert: "Certified Cyber Security Specialist (4-8 Months)",
-      btn: "./CyberSecurity.js"
+      btn: "/cyber-security"
     },
     {
       img1: frontendIcon,
@@ -88,7 +87,7 @@ function Home() {
       reviews: 890,
       tutor: "Nonso Okeke",
       cert: "Frontend Developer Certificate (3-6 Months)",
-      btn: "./FrontendDevelopment.js"
+      btn: "/frontend-development"
     },
     {
       img1: techWrite,
@@ -130,7 +129,7 @@ function Home() {
         <div className='introText'>
           <h1 id='firstH1' className='bigBlue'>Explore Over <span>100's</span> of our courses to kick start your career.</h1>
           <p id='firstP'>Engage with interactive courses, expert instructors, and a community of learners to further your career.</p>
-          <button onClick={btnClick} id='StartBtn'><a href='/' id='diveTxt'>Get Started Here →</a></button>
+          <button onClick={btnClick} id='StartBtn'><a href='/signIn' id='diveTxt'>Get Started Here </a></button>
         </div>
         <div className='myImage'>
           

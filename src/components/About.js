@@ -53,7 +53,7 @@ function About() {
         </div>
         <div class="stat-item">
           <h1>1.5k+</h1>
-          <p>Course Enrollments</p>
+          <p>Enrollments</p>
         </div>
         <div class="stat-item">
           <h1>5</h1>
