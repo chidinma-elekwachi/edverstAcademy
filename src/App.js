@@ -13,6 +13,7 @@ import CyberSecurity from './components/MyCourses/CyberSecurity';
 import FrontendDevelopment from './components/MyCourses/FrontendDevelopment';
 import SoftwareEngineering from './components/MyCourses/SoftwareEngineering';
 import TechnicalWriting from './components/MyCourses/TechnicalWriting';
+import Dashboard from './components/Logins/Dashboard';
 
 import './App.css';
 
@@ -21,7 +22,7 @@ function App() {
     <Router>
       <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/faq" element={<Faq />} />
@@ -33,6 +34,9 @@ function App() {
           <Route path="/software-engineering" element={<SoftwareEngineering />} />
           <Route path="/frontend-development" element={<FrontendDevelopment />} />
           <Route path="/technical-writing" element={<TechnicalWriting />} />
+
+          <Route path="/dashboard" element={<Dashboard />} />
+
 
         </Routes>
     </Router>

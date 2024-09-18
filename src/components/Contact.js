@@ -1,4 +1,4 @@
-import React, { useState } from 'react';  // Add useState from React
+import React, { useState } from 'react';
 import '../styles/Contact.css';
 
 // contact icons
@@ -11,7 +11,7 @@ import telegramIcon from '../Assets/icons8-telegram-30.png';
 import Footer from '../pages/Footer';
 
 function Contact() {
-  const [msg, setMsg] = useState('');  
+  const [msg, setMsg] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ function Contact() {
         setMsg('Your message has been sent successfully!');
         setTimeout(() => {
           setMsg('');
-        }, 500);
+        }, 5000);
         form.reset();
       })
       .catch(error => console.error('Error!', error.message));
@@ -40,15 +40,15 @@ function Contact() {
           <div className='call'>
             <a href="tel:+2349138661387">
               <img src={callIcon} alt='Call Icon' className='contact-icon' />
-               +2349138661387
+              +2349138661387
             </a>
             <a href="mailto:elexisbiz@gmail.com">
               <img src={mailIcon} alt='Mail Icon' className='contact-icon' />
-               elexisbiz@gmail.com
+              elexisbiz@gmail.com
             </a>
             <p>
               <img src={locationIcon} alt='Location Icon' className='contact-icon' />
-               2972 Westheimer Rd, Santa Ana, Illinois 85485
+              2972 Westheimer Rd, Santa Ana, Illinois 85485
             </p>
           </div>
 
@@ -62,53 +62,52 @@ function Contact() {
         <div className='contForm'>
           <form name="submit-to-google-sheet" onSubmit={handleSubmit}>
             <div className='infos'>
-              <div className="input-pair">
+              <div className='input-pair'>
                 <div>
-                  <label htmlFor="fname">First Name</label>
+                  <label htmlFor='fname'>First Name</label>
                   <input type='text' name='fname' required />
                 </div>
                 <div>
-                  <label htmlFor="sname">Last Name</label>
-                  <input type='text' name='sname' required /><br />
+                  <label htmlFor='sname'>Last Name</label>
+                  <input type='text' name='sname' required />
                 </div>
               </div>
-              <br />
-              <div className="input-pair">
+
+              <div className='input-pair'>
                 <div>
-                  <label htmlFor="mail">Email Address</label>
+                  <label htmlFor='mail'>Email Address</label>
                   <input type='email' name='mail' required />
                 </div>
                 <div>
-                  <label htmlFor="phone">Phone Number</label>
-                  <input type='number' name='phone' required /><br />
+                  <label htmlFor='phone'>Phone Number</label>
+                  <input type='number' name='phone' required />
                 </div>
               </div>
-              <br />
             </div>
 
             <div className='myRad'>
-              <label htmlFor="subject">Select Subject</label><br />
-              <label className='radioL'>
-                <input type="radio" name="subject" value="general-inquiry" required />
-                General Inquiry
-              </label>
-              <label className='radioL'>
-                <input type="radio" name="subject" value="personal-enquiry" />
-                Personal Inquiry
-              </label>
-              <br />
+              <label htmlFor='subject'>Select Subject</label>
+              <div>
+                <label className='radioL'>
+                  <input type='radio' name='subject' value='general-inquiry' required />
+                  General Inquiry
+                </label>
+                <label className='radioL'>
+                  <input type='radio' name='subject' value='personal-enquiry' />
+                  Personal Inquiry
+                </label>
+              </div>
             </div>
 
             <div className='subj'>
-              <label htmlFor="message">Message</label>
-              <textarea name='message' cols="10" rows="5" maxLength={100} required></textarea><br />
-
-              <section>
-                <button type='submit'>Send Message</button>
-              </section>
+              <label htmlFor='message'>Message</label>
+              <textarea name='message' required />
             </div>
 
-            <span id="msg">{msg}</span>
+            <section>
+              <button type='submit'>Send Message</button>
+            </section>
+            {msg && <p>{msg}</p>}
           </form>
         </div>
       </div>

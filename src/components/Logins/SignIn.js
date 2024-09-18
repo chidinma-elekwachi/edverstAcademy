@@ -28,7 +28,7 @@ const SignIn = () => {
       axios.post('http://localhost:8081/signin', values)
       .then(res => {
         if (res.data === "Success") {
-          navigate('/');
+          navigate('/dashboard');
         } else {
           alert('Failed to sign in or invalid password');
         }
