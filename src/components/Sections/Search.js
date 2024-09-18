@@ -6,15 +6,27 @@ const SearchForm = () => {
   const [filteredWords, setFilteredWords] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
-  const relatedWords = [
-    'JavaScript',
-    'React',
-    'CSS',
-    'HTML',
-    'Tailwind CSS',
-    'Node.js',
-    'TypeScript'
-  ];
+  const termToRoute = {
+    'js': '/frontend-development',
+    'javascript': '/frontend-development',
+    'react': '/software-engineering',
+    'css': '/frontend-development',
+    'html': '/frontend-development',
+    'tailwind': '/frontend-development',
+    'node': '/software-engineering',
+    'typescript': '/software-engineering',
+    'write': '/technical-writing',
+    'writing': '/technical-writing',
+    'cyber': '/cyber-security',
+    'security': '/cyber-security',
+    'network': '/cyber-security',
+    'crypto': '/cyber-security',
+    'intrusion': '/cyber-security',
+    'malware': '/cyber-security',
+    'content': '/technical-writing',
+  };
+
+  const relatedWords = Object.keys(termToRoute);
 
   const handleInputChange = (e) => {
     const value = e.target.value;
@@ -28,6 +40,12 @@ const SearchForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowDropdown(true);
+  };
+
+  const handleLinkClick = (path) => {
+    setSearchTerm(''); // Clear the input
+    setShowDropdown(false); // Hide the dropdown
+    window.location.href = path; // Redirect to the page
   };
 
   return (
@@ -49,7 +67,12 @@ const SearchForm = () => {
         <ul className="dropdown">
           {filteredWords.map((word, index) => (
             <li key={index}>
-              <a href={`/${word.toLowerCase()}`}>{word}</a>
+              <a
+                href="#"
+                onClick={() => handleLinkClick(termToRoute[word.toLowerCase()])}
+              >
+                {word}
+              </a>
             </li>
           ))}
         </ul>

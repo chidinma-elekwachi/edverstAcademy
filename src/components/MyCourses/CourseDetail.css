@@ -110,6 +110,8 @@
 
 .course-buttons {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin: 20px 0;
 }
@@ -118,9 +120,10 @@
     padding: 10px 35px;
     border: none;
     color: #fff;
+    width: 40%;
     border-radius: 5px;
     cursor: pointer;
-    background-color: rgb(23, 162, 83); /* Green color */
+    background-color: rgb(23, 162, 83); 
     margin-right: 10px;
 }
 
@@ -211,4 +214,67 @@
 }
 
 
+
+.buy-button {
+    padding: 10px 35px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(23, 162, 83);
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: rgb(20, 137, 65);
+}
+
+.favourite-button {
+    padding: 10px 35px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(223, 73, 19);
+    margin-right: 10px;
+}
+.favourite-button:hover::after{
+    content: "✓";
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+     75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.course-item:hover {
+    background-color: rgba(0, 0, 0, 0.05); 
+}
+
+.video-duration {
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.limited-time-offer {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
 

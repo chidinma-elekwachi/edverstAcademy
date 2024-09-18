@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 import './Styles/SignIn.css'
-import Footer from '../../pages/Footer'
 import { Link, useNavigate } from 'react-router-dom'
-import validation from './SignUpValidation'
-import signup from '../../Assets/SignUpImg.png'
+import Footer from '../../pages/Footer'
+import validation from './SigninValidation'
+import signin from '../../Assets/signin.jpg'
 import axios from 'axios'
 
-const SignUp = () => {
 
+const SignIn = () => {
   const [values, setValues] = useState({
-    name: '',
-    phonenumber: '',    
     email: '',
     password: '',
   })
-  const navigate = useNavigate();
+
+  const navigate  = useNavigate();
+
   const [errors, setErrors] = useState({})
   const handleInput = (event) => {
     setValues(prev => ({...prev, [event.target.name]: [event.target.value]}))
@@ -22,39 +22,35 @@ const SignUp = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const err = validation(values);
-    setErrors(err)
-    if(err.name ==="" && errors.email ==="" && errors.password ==="") {
-      axios.post('http://localhost:8081/signup', values)
+    // const err = validation(values);
+    setErrors(validation(values))
+    if(errors.email ==="" && errors.password ==="") {
+      axios.post('http://localhost:8081/signin', values)
       .then(res => {
-        navigate('/signIn')
+        if (res.data === "Success") {
+          navigate('/');
+        } else {
+          alert('Failed to sign in or invalid password');
+        }
       })
       .catch(err => console.log(err));
     }
     
   }
-  return (
-    <div className='login-page'>
-      <h1>Welcome <br/> We are happy to have you!</h1>
-      <div className='login-container'>
 
+  return (
+    
+
+    <div className='login-page'>
+      <div className='login-container'>
       <div className='login-left'>
-        <h1>Sign up</h1>
-        <img src={signup} alt='signup'/>
+        <h1>Welcome Back!</h1>
+        <img src={signin}></img>
       </div>
       <div className='login-right'>
         <form action='' onSubmit={handleSubmit} className='login-form'>
+          <h2>Sign In</h2>
           <div className='border-line'>
-          <div>
-            <label htmlFor='text'></label>
-            <input type='name' placeholder='Fullname' name='name' onChange={handleInput} />
-            {errors.name && <span> {errors.name}</span>}
-          </div>
-          <div>
-            <label htmlFor='number'></label>
-            <input type='phonenumber' placeholder='Phone Number' name='number' onChange={handleInput} />
-            {errors.phonenumber && <span> {errors.phonenumber}</span>}
-          </div>
           <div>
             <label htmlFor='email'></label>
             <input type='email' placeholder='Enter Address' name='email' onChange={handleInput} />
@@ -65,19 +61,18 @@ const SignUp = () => {
             <input type='password' placeholder='Password' name='password' onChange={handleInput} />
             {errors.password && <span> {errors.password}</span>}
           </div>
-          <button type='submit'>Sign up</button>
+          <button type='submit' >Login</button>
           </div>
-          <p>Already have an account? <Link to="/signin" className='forgot'>Sign-In</Link></p>
-          
+          <Link to="/signup" className='forgot-password'>Create Account</Link>
         </form>
       </div>
+    </div>
 
-      </div>
-      <div>
+    <div>
       <Footer />
-      </div>
+    </div>
     </div>
   )
 }
 
-export default SignUp
+export default SignIn

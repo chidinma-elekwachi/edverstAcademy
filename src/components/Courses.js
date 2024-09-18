@@ -50,7 +50,8 @@ const coursesData = [
   }
 ];
 
-function Courses() {
+function Courses(myHead) {
+  myHead = "Courses";
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -73,7 +74,7 @@ function Courses() {
     <div>
 
     <div className="courses-container">
-      <h1 className="courses-title">Courses</h1>
+      <h1 className="courses-title">{myHead}</h1>
 
       <div className="courses-grid">
         {coursesData.slice(currentIndex, currentIndex + 3).map((course, index) => (

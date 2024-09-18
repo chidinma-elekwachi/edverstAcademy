@@ -17,6 +17,7 @@
     border-radius: 25px;
     display: flex;
     align-items: center; 
+    padding-bottom: 0px;
   }
   
   .myInput {

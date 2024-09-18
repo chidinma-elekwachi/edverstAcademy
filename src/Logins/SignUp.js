@@ -3,7 +3,7 @@ import './Styles/SignIn.css'
 import Footer from '../../pages/Footer'
 import { Link, useNavigate } from 'react-router-dom'
 import validation from './SignUpValidation'
-import signup from '../../Assets/SignUpImg.png'
+import signup from '../../Assets/signup.jpg'
 import axios from 'axios'
 
 const SignUp = () => {
@@ -35,7 +35,8 @@ const SignUp = () => {
   }
   return (
     <div className='login-page'>
-      <h1>Welcome <br/> We are happy to have you!</h1>
+      <h1>Welcome</h1>
+      <h1>We are happy to have you!</h1>
       <div className='login-container'>
 
       <div className='login-left'>

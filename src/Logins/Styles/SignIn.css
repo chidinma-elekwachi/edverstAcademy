@@ -7,7 +7,7 @@
 
   .login-page h1 {
     color: rgb(21, 21, 54);
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 20px;
    text-align: center;
   }
@@ -127,17 +127,11 @@
     }
     
     .login-left {
-        padding: 0px;
-        padding-right: 20px;
-    }
-    .login-page h1{
-      font-size: 1.3rem;
-      padding-top: 20px;
+        padding: 20px
     }
 
     .login-right {
-        padding: 0px;
-        padding-right: 20px;
+        padding: 20px;
   }
   
 }
