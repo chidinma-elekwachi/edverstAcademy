@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Courses.css';
 import techWrite from '../Assets/techwriting.jpg';
 import sweIcon from '../Assets/softwareEng.jpg';
 import cyberIcon from '../Assets/cyberSec.jpg';
 import frontendIcon from '../Assets/frontend.jpg';
+import Footer from '../pages/Footer';
 
 const coursesData = [
   {
@@ -28,9 +29,8 @@ const coursesData = [
     btn: "/cyber-security"
   },
   {
-    img1: frontendIcon, 
+    img1: frontendIcon,
     title: "Frontend Development",
-   
     info: "Design and build beautiful, responsive websites from scratch.",
     rating: 4.5,
     reviews: 890,
@@ -39,7 +39,7 @@ const coursesData = [
     btn: "/frontend-development"
   },
   {
-    img1: techWrite, 
+    img1: techWrite,
     title: "Technical Writing",
     info: "Craft clear and concise technical documents for software projects.",
     rating: 4.9,
@@ -61,7 +61,17 @@ function Courses() {
     setCurrentIndex((prevIndex) => (prevIndex === coursesData.length - 3 ? 0 : prevIndex + 1));
   };
 
+  useEffect(() => {
+    const autoSlide = setInterval(() => {
+      handleNext();
+    }, 8000);
+
+    return () => clearInterval(autoSlide);
+  }, []);
+
   return (
+    <div>
+
     <div className="courses-container">
       <h1 className="courses-title">Courses</h1>
 
@@ -80,6 +90,9 @@ function Courses() {
         <span className="carousel-control prev" onClick={handlePrev}>&lt;</span>
         <span className="carousel-control next" onClick={handleNext}>&gt;</span>
       </div>
+
+    </div>
+      <Footer />
     </div>
   );
 }
