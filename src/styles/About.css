@@ -1,189 +1,202 @@
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+}
 
+.about-text {
+  flex: 1;
+  margin-bottom: 20px;
+  color: rgb(21, 21, 54);
+  padding: 40px;
+}
+
+.about-text h1 {
+  font-size: 2.5em;
+  color: rgb(21, 21, 54);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.about-images {
+  flex: 1;
+}
+.about-images img{
+  width: 400px;
+  height: auto;
+}
+
+.about-images h1 {
+  position: relative;
+  bottom: 85px;
+  color: orangered;
+}
+
+.image-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-weight: bold;
+  color: rgb(21, 21, 54);
+}
+
+.title {
+  font-size: 0.9em;
+  color: orangered;
+}
+
+@media (min-width: 768px) {
   .about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
-    padding: 20px;
+    flex-direction: row;
+    width: 100%;
+    gap: 40px;
   }
-  
+
   .about-text {
-    flex: 1;
-    margin-bottom: 20px;
-    color: rgb(21, 21, 54);
-    padding: 40px;
+    width: 60%;
   }
-  
-  .about-text h1 {
-    font-size: 2.5em;
-    color: rgb(21, 21, 54);
-    margin-bottom: 20px;
-  }
-  
-  .about-text p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
   .about-images {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .image-container {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .image-container img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .name {
-    font-size: 1.2em;
-    margin-top: 10px;
-    font-weight: bold;
-    color: rgb(21, 21, 54);
-  }
-  
-  .title {
-    font-size: 0.9em;
-    color: orangered;
-  }
-  
-  @media (min-width: 768px) {
-    .about-content {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    .about-images {
-      flex-direction: row;
-      gap: 40px;
-    }
-  }
-  
-  .testimonials {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .testimonials h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: rgb(21, 21, 54);
-    padding: 30px;
-  }
-  
-  .testimonial-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .testimonial {
-    background-color: #f4f4f4;
-    padding: 25px;
-    border-radius: 10px;
-    font-size: 1.2em;
-    font-weight: 500;
-    position: relative;
-    color: rgb(21, 21, 54);
+    width: 40%;
+    height: auto;
   }
 
-  .offering{
-    padding: 60px;
-    padding-bottom: 95px;
-    background-image: url(../Assets//hugAnime.png);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    margin-top: 50px;
+  .about-images {
+    height: auto;
   }
-  .offering h1 {
-    color: rgb(21, 21, 54);
-    margin-bottom: 10px;
+}
 
-  }
-  .offering h4{
-    color: rgb(255, 128, 0);
-    padding-bottom: 10px;
-  }
-  
-  .testimonial .quote {
-    color: rgb(223, 73, 19);
-    font-size: 1.5em;
-    font-weight: bold;
-  }
-  .offering ul{
-    color: rgb(21, 21, 54);
-    padding-left: 20px;
-  }
+.testimonials {
+  text-align: center;
+  padding: 20px;
+}
 
-  @media (max-width: 768px) {
-  .offering{
+.testimonials h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: rgb(21, 21, 54);
+  padding: 30px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.testimonial {
+  background-color: #f4f4f4;
+  padding: 25px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+  position: relative;
+  color: rgb(21, 21, 54);
+}
+
+.offering {
+  padding: 60px;
+  padding-bottom: 95px;
+  background-image: url(../Assets/hugAnime.png);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  margin-top: 50px;
+}
+
+.offering h1 {
+  color: rgb(21, 21, 54);
+  margin-bottom: 10px;
+}
+
+.offering h4 {
+  color: rgb(255, 128, 0);
+  padding-bottom: 10px;
+}
+
+.testimonial .quote {
+  color: rgb(223, 73, 19);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.offering ul {
+  color: rgb(21, 21, 54);
+  padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .offering {
     padding: 50px;
     padding-bottom: 150px;
     background-position: right bottom;
     background-size: 300px auto;
   }
-  
 }
-  
-  @media (min-width: 768px) {
-    .testimonial-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    
-  }
-  .impact{
-    background-color: rgb(21, 21, 54);
-    color: #f4f4f4;
-    text-align: center;
-    padding: 40px;
-  }
-  .impactxt{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  .impactxt p{
-    width: 60%;
-    text-align: center;
-    padding: 20px;
-  }
 
+@media (min-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.impact {
+  background-color: rgb(21, 21, 54);
+  color: #f4f4f4;
+  text-align: center;
+  padding: 40px;
+}
+
+.impactxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.impactxt p {
+  width: 60%;
+  text-align: center;
+  padding: 20px;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h1 {
+  font-size: 2.1rem;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
   .stats-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .stat-item {
-    text-align: center;
+  .impact p {
+    width: 90%;
   }
-
-  .stat-item h1 {
-    font-size: 2.1rem;
-  }
-
-  .stat-item p {
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-
-  @media (max-width: 768px) {
-    .stats-container {
-      grid-template-columns: repeat(2, 1fr); 
-    }
-    .impact p{
-      width: 90%;
-    }
-  }
-  
+}

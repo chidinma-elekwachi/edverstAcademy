@@ -3,6 +3,9 @@
     font-size: 3rem;
     line-height: 3.9rem;
 }
+body{
+    overflow-x: hidden;
+}
 .bigBlue{
     color: rgb(37, 37, 112);
 }
@@ -38,7 +41,8 @@ span{
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center;
+    align-items: center;  
+    
 }
 #diveBtn{
     padding: 15px;
@@ -234,3 +238,16 @@ span{
     padding-bottom: 15px;
   }
   
+
+  /* Slide in css */
+  .slideIn{
+    transform: translateX(200%);
+    transition: transform 0.4s ease;
+  }
+
+  .slideIn:nth-of-type(even){
+    transform: translateX(-200%);
+  }
+  .slideIn.show{
+    transform: translateX(0);
+  }

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/About.css';
-import founder from '../Assets/chichi.jpg';
-import cofounder from '../Assets/promiseProject.jpg'; 
+import Team from '../Assets/teampic.jpg'
+
 import Footer from '../pages/Footer';
 
 function About() {
@@ -19,16 +19,7 @@ function About() {
         </div>
 
         <div className="about-images">
-          <div className="image-container">
-            <img src={founder} alt="Chidinma Elekwachi" />
-            <p className="name">Chidinma Elekwachi</p>
-            <p className="title">Founder</p>
-          </div>
-          <div className="image-container">
-            <img src={cofounder} alt="Promise Akobi" />
-            <p className="name">Promise Akobi</p>
-            <p className="title">Co-Founder</p>
-          </div>
+          <img src={Team} alt='myTeam'/>
         </div>
       </div>
 
