@@ -1,6 +1,6 @@
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: #d3d3d3;
     color: hsl(240, 44%, 15%);
     padding: 20px;
@@ -9,10 +9,6 @@
     margin-top: 80px;
   }
   
-  .footer-section {
-    flex: 1;
-    margin-right: 20px;
-  }
   
   .footer-section h4 {
     margin-bottom: 20px;

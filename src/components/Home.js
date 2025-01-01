@@ -121,6 +121,25 @@ function Home() {
       bio: "A creative frontend developer with a flair for designing user interfaces."
     }
   ];
+
+  
+  const boxes = document.querySelectorAll('.slideIn');
+  window.addEventListener('scroll', checkBoxes);
+  checkBoxes()
+
+  function checkBoxes() {
+    const triggerBottom = window.innerHeight/ 5 * 4
+     boxes.forEach(box => {
+      const boxTop = box.getBoundingClientRect().top
+
+      if (boxTop < triggerBottom) {
+        box.classList.add('show')
+      } else {
+        box.classList.remove('show')
+      }
+     
+    })
+  }
   
 
   return (
@@ -195,23 +214,6 @@ function Home() {
     </div>
   );
 
-  const boxes = document.querySelectorAll('.slideIn');
-  window.addEventListener('scroll', checkBoxes);
-  checkBoxes()
-
-  function checkBoxes() {
-    const triggerBottom = window.innerHeight/ 5 * 4
-     boxes.forEach(box => {
-      const boxTop = box.getBoundingClientRect().top
-
-      if (boxTop < triggerBottom) {
-        box.classList.add('show')
-      } else {
-        box.classList.remove('show')
-      }
-     
-    })
-  }
 
 
 

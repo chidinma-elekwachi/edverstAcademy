@@ -22,6 +22,7 @@ const Footer = () => {
           <img className="myPlay" src={playStore} alt="App Store" />
         </div>
       </div>
+
       <div className="footer-section">
         <h4>Pages</h4>
         <ul>
@@ -33,15 +34,17 @@ const Footer = () => {
 
         </ul>
       </div>
+
       <div className="footer-section">
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:+2349023846504">+2349023846504</a></li>
           <li><a href="tel:+2349138661387">+2349138661387</a></li>
           <li><a href="mailto:elexisbiz@gmail.com">elexisbiz@gmail.com</a></li>
-          <li>2972 Westheimer Rd, Santa Ana, Illinois 85485</li>
+          <li>2972 Westheimer Rd, Santa Ana,<br></br> Illinois 85485</li>
         </ul>
       </div>
+
       <div className="footer-section">
         <h4>Social Media</h4>
         <div className="social-icons">
@@ -59,6 +62,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
+
     </footer>
   );
 };
