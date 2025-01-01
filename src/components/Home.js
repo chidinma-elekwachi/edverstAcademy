@@ -140,7 +140,6 @@ function Home() {
      
     })
   }
-  
 
   return (
     <div>
