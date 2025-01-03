@@ -35,7 +35,6 @@
     align-items: center;
   }
 
- 
   
   .navButtons {
     display: flex; 
@@ -53,6 +52,10 @@
   .secondBtn {
     background-color: rgb(8, 8, 95);
     border: 1px solid white;
+  }
+  .secondBtn:hover{
+    transition: transform 1s ease;
+    transform: scale(1.05);
   }
   
   .search {

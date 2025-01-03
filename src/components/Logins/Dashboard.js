@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import './Dashboard.css'; 
-import student from '../../Assets/tutor2.jpg'
+import student from '../../Assets/chidinmaPic.jpg'
 
 
 const profileInfo = {

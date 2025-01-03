@@ -129,7 +129,7 @@ function Home() {
         <div className='introText'>
           <h1 id='firstH1' className='bigBlue'>Explore Over <span>100's</span> of our courses to kick start your career.</h1>
           <p id='firstP'>Engage with interactive courses, expert instructors, and a community of learners to further your career.</p>
-          <button onClick={btnClick} id='StartBtn'><a href='/signIn' id='diveTxt'>Get Started Here </a></button>
+          <button onClick={btnClick} id='StartBtn'><a href='/signUp' id='diveTxt'>Get Started Here </a></button>
         </div>
         <div className='myImage'>
           
