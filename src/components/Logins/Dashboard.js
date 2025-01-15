@@ -12,16 +12,19 @@ const profileInfo = {
 };
 
 const courses = [
-  { name: 'Cyber Security', progress: 28, coursesLeft: 56, link: '/CyberSecurity' },
-  { name: 'Technical Writing', progress: 15, coursesLeft: 34, link: '/TechnicalWriting' },
+  { name: 'Cyber Security', progress: 28, coursesLeft: 56, link: '/cyber-security' },
+  { name: 'Technical Writing', progress: 15, coursesLeft: 34, link: '/technical-writing' },
 ];
 
 function Dashboard() {
   return (
     <div className="dashboard-container">
-      <aside className="profile-image">
-        <img src={student} alt="Profile" />
-      </aside>
+      <div className='imageText'>
+        <aside className="profile-image">
+          <img src={student} alt="Profile" />
+        </aside>
+
+      </div>
       <main className="dashboard-main">
         <section className="welcome-section">
           <h1 className="welcome-text">Welcome {profileInfo.name}!</h1>
@@ -36,12 +39,12 @@ function Dashboard() {
           <h2 className="course-status-heading">Course Activity Status</h2>
           <div className="course-list">
             {courses.map((course, index) => (
-              <div key={index} className="course-item">
+              <div key={index} className="course-item2">
                 <p className="course-name">{index + 1}. {course.name}</p>
                 <p>Progress: {course.progress}%</p>
                 <p>{course.coursesLeft} Courses left</p>
                 <Link to={course.link} className="continue-button">
-                  Continue Learning →
+                  Continue Learning
                 </Link>
               </div>
             ))}

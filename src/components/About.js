@@ -31,27 +31,27 @@ function About() {
 
         <div class="stats-container">
         <div class="stat-item">
-          <h1>73k+</h1>
+          <h1>3k+</h1>
           <p>Learners</p>
         </div>
         <div class="stat-item">
-          <h1>75+</h1>
+          <h1>10+</h1>
           <p>Instructors</p>
         </div>
         <div class="stat-item">
-          <h1>20K+</h1>
+          <h1>150+</h1>
           <p>Courses</p>
         </div>
         <div class="stat-item">
-          <h1>1.5k+</h1>
+          <h1>500+</h1>
           <p>Enrollments</p>
         </div>
         <div class="stat-item">
-          <h1>5</h1>
+          <h1>3</h1>
           <p>Languages</p>
         </div>
         <div class="stat-item">
-          <h1>1K+</h1>
+          <h1>166+</h1>
           <p>Certifications</p>
         </div>
       </div>

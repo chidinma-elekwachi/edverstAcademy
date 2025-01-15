@@ -87,18 +87,14 @@ function Contact() {
 
             <div className='myRad'>
               <label htmlFor='subject'>Select Subject</label>
-              <div>
-                <label className='radioL'>
-                  <input type='radio' name='subject' value='general-inquiry' required />
-                  General Inquiry
-                </label>
-                <label className='radioL'>
-                  <input type='radio' name='subject' value='personal-enquiry' />
-                  Personal Inquiry
-                </label>
+              <div className='radioL'>
+              <input type='radio' name='subject' value='general-inquiry' required />
+                <label >General Inquiry</label>
+                <input type='radio' name='subject' value='personal-enquiry' />
+                <label>Personal Inquiry</label>
               </div>
             </div>
-
+            
             <div className='subj'>
               <label htmlFor='message'>Message</label>
               <textarea name='message' required />

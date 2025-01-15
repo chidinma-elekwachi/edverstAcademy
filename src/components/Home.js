@@ -10,7 +10,7 @@ import certifIcon from '../Assets/certifi.png'
 import liveSuport from '../Assets/global.png'
 import curricIcon from '../Assets/curricculum.png'
 
-import tutor1 from '../Assets/chichi.jpg'
+import tutor1 from '../Assets/chidinmaPic.jpg'
 import tutor2 from '../Assets/promiseProject.jpg'
 import tutor3 from '../Assets/nonsoProject.jpg'
 

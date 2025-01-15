@@ -226,18 +226,6 @@
      75% { transform: translateX(-5px); }
     100% { transform: translateX(0); }
 }
-.course-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.course-item:hover {
-    background-color: rgba(0, 0, 0, 0.05); 
-}
 
 .video-duration {
     color: black;

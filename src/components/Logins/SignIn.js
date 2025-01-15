@@ -1,25 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Styles/SignIn.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Footer from '../../pages/Footer';
 import signin from '../../Assets/signInImg.png';
 
 const SignIn = () => {
-  const [values, setValues] = useState({
-    email: '',
-    password: '',
-  });
 
   const navigate = useNavigate();
-  const [errors, setErrors] = useState({});
-
-  const handleInput = (event) => {
-    setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Add any validation or API call logic here if needed
     navigate('/dashboard'); 
   };
 
@@ -41,9 +31,9 @@ const SignIn = () => {
                   placeholder='Enter Address'
                   name='email'
                   required
-                  onChange={handleInput}
+                  className='signInput'
+              
                 />
-                {errors.email && <span>{errors.email}</span>}
               </div>
               <div>
                 <label htmlFor='password'></label>
@@ -52,9 +42,9 @@ const SignIn = () => {
                   placeholder='Password'
                   name='password'
                   required
-                  onChange={handleInput}
+                  className='signInput'
+                  // onChange={handleInput}
                 />
-                {errors.password && <span>{errors.password}</span>}
               </div>
               <button type='submit'>Login</button>
             </div>

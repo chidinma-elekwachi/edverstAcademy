@@ -101,22 +101,32 @@ textarea {
 
 .contForm input[type="radio"] {
     accent-color: rgb(21, 21, 54);
-    margin-right: 5px;
 }
 
 .myRad {
     padding: 15px 0px;
 }
 
-.radioL {
-    margin-right: 20px;
+
+.myRad {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    flex-direction: column;
+    gap: 0px; 
 }
 
-.radioL input[type="radio"] {
-    margin-right: 5px;
+.myRad label {
+    font-size: 14px;
+    color: rgb(21, 21, 54);
+}
+
+.myRad > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.radioL {
+    padding: 20px 0px;
+    margin-right: 25px;
 }
 
 .contForm button {
@@ -176,26 +186,7 @@ textarea {
     }
 }
 
-.myRad {
-    display: flex;
-    flex-direction: column;
-    gap: 0px; 
-}
 
-.myRad label {
-    font-size: 14px;
-    color: rgb(21, 21, 54);
-}
 
-.myRad > div {
-    display: flex;
-    justify-content: space-between;
-}
 
-.radioL {
-    padding: 20px 0px;
-}
 
-.radioL input[type="radio"] {
-    margin-right: 20px; 
-}

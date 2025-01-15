@@ -45,6 +45,7 @@ function CyberSecurity() {
 
         <div className="course-detail-grid">
           <div className="course-info-section">
+          
             <div className="course-info-container">
               <ul className="course-outline">
                 {courses.map((course) => (

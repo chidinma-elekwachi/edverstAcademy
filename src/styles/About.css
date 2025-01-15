@@ -28,8 +28,10 @@
   flex: 1;
 }
 .about-images img{
-  width: 400px;
+  width: 500px;
+  max-width: 100%;
   height: auto;
+  box-shadow: 0 0 10px;
 }
 
 .about-images h1 {

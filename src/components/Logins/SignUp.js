@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Styles/SignIn.css';
 import Footer from '../../pages/Footer';
 import { Link, useNavigate } from 'react-router-dom';
 import signup from '../../Assets/SignUpImg.png';
 
 const SignUp = () => {
-  const [values, setValues] = useState({
-    name: '',
-    phonenumber: '',
-    email: '',
-    password: '',
-  });
+  // const [values, setValues] = useState({
+  //   name: '',
+  //   phonenumber: '',
+  //   email: '',
+  //   password: '',
+  // });
 
   const navigate = useNavigate();
   
-  const handleInput = (event) => {
-    setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
-  };
+  // const handleInput = (event) => {
+  //   setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
+  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -41,7 +41,7 @@ const SignUp = () => {
                   placeholder="Fullname"
                   name="name"
                   required
-                  onChange={handleInput}
+                  className='signInput'
                 />
                 
               </div>
@@ -52,7 +52,7 @@ const SignUp = () => {
                   placeholder="Phone Number"
                   name="phonenumber"
                   required
-                  onChange={handleInput}
+                  className='signInput'
                 />
 
               </div>
@@ -63,7 +63,7 @@ const SignUp = () => {
                   placeholder="Enter Address"
                   name="email"
                   required
-                  onChange={handleInput}
+                  className='signInput'
                 />
               </div>
               <div>
@@ -73,7 +73,7 @@ const SignUp = () => {
                   placeholder="Password"
                   name="password"
                   required
-                  onChange={handleInput}
+                  className='signInput'
                 />
               </div>
               <button type="submit">Sign up</button>

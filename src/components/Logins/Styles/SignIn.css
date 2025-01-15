@@ -59,7 +59,7 @@
     margin: 20px;
   }
 
-  input {
+  .signInput {
     width: 100%;
     padding: 12px;
     border: 1px solid rgb(114, 114, 170);
